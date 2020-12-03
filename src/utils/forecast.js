@@ -12,7 +12,7 @@ const forecast=(lat,lon,callback)=>{
         }else{
             const data=response.body;
             const forecast={
-                weather:'it is currently '+data.current.weather_descriptions[0]+' the current temperature is '+data.current.temperature+' in kelvin scale'
+                weather:'it is currently '+data.current.weather_descriptions[0]+' the current temperature is '+data.current.temperature+' in kelvin scale and the humidity as observed was '+data.current.humidity+' %'
             }
             callback(undefined,forecast)
         }
